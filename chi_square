@@ -1,0 +1,4 @@
+from scipy.stats import chi2
+import numpy as  np
+x=chi2.isf(0.99 ,2)
+print(round(x,4))
