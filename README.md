@@ -1,3 +1,3 @@
-"# 208" 
+"# cs208" 
 
 "z, t, chi-square and F distributions table"
