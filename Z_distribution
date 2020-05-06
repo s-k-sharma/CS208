@@ -9,8 +9,8 @@ def normalProbabilityDensity(x):
 x=float(input("enter value"))
 z=np.round(x,2)
 value=quad(normalProbabilityDensity, np.NINF, z)
-print(np.round(value[0],5))
+print(np.round(value[0],5),"z value")
 # part B
 value1=norm.ppf(value,loc=0,scale=1)
-print(round(value1[0],4))
+print(round(value1[0],4)," z0 value")
 
