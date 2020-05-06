@@ -1,5 +1,6 @@
 from scipy.integrate import quad
 import numpy as np
+from scipy.stats import norm
 
 def normalProbabilityDensity(x):
     constant = 1.0 / np.sqrt(2*np.pi)
@@ -9,3 +10,7 @@ x=float(input("enter value"))
 z=np.round(x,2)
 value=quad(normalProbabilityDensity, np.NINF, z)
 print(np.round(value[0],5))
+# part B
+value1=norm.ppf(value,loc=0,scale=1)
+print(round(value1[0],4))
+
