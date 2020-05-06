@@ -7,5 +7,5 @@ def chi_calculator( p,df ):
 p, df =float(input("enter p")),float(input("enter dof"))
 value1=chi_calculator(p,df)
 value = round(t.ppf(value1, df),4)
-print(value)
-print(chi_calculator(p,df))
+print(value," output ")
+print(chi_calculator(p,df)," intial")
