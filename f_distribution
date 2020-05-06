@@ -1,11 +1,10 @@
-from scipy.stats import chi2
-from scipy.stats import t
-def chi_calculator( p,df ):
-    x=chi2.sf(p,df)
-    x=round(x,4)
-    return x
-p, df =float(input("enter p")),float(input("enter dof"))
-value1=chi_calculator(p,df)
-value = round(t.ppf(value1, df),4)
-print(value," output ")
-print(chi_calculator(p,df)," intial")
+from scipy.stats import f
+
+df1=int(input("enter dof1"))
+df2 =int( input("enter dof2"))
+pd=float(input("enter cumulative probability "))
+alpha= float(1-pd) # getting alpha
+x = round(f.ppf(alpha, df1, df2),4)
+vals = round(f.cdf(x, df1, df2),4)   # cdf calculating Cumulative distribution function.
+print(x,"printing f value")   # printing  f_distribution value
+print(round(1-vals,4)," f0")
