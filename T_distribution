@@ -5,4 +5,6 @@ df = int(input("enter the degree of freedom"))
 # retrieve value <= probability
 value = t.ppf(p, df)
 print(round(value,5))
-# confirm with cdf p = t.cdf(value, df) print(p)
+# confirm with cdf
+p = t.cdf(value, df)
+print(round(p,5))
