@@ -3,8 +3,8 @@ from scipy.stats import t
 p =float(input("enter the probability"))
 df = int(input("enter the degree of freedom"))
 # retrieve value <= probability
-value = t.ppf(p, df)   # ppf is inverse of cdf
-print(round(value,5))
+value = t.ppf((1-p), df)   # ppf is inverse of cdf
+print(round(value,5),"t value")
 # confirm with cdf
 p = t.cdf(value, df)
-print(round(p,5))
+print(round(1-p,5),"t0 value")
